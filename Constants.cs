@@ -1,10 +1,8 @@
-﻿namespace TooMuchInfo
-{ 
-    internal class Constants
-    {
-        public const string GUID = "zlothy.toomuchinfo";
-        public const string Name = "TooMuchInfo";
-        public const string HashKey = "github.com/ZlothY29IQ/TooMuchInfo";
-        public const string Version = "1.1.3";
-    }
+﻿namespace TooMuchInfo;
+
+public static class Constants
+{
+    public const string PluginGuid    = "hansolo1000falcon.toomuchinfo";
+    public const string PluginName    = "TooMuchInfo";
+    public const string PluginVersion = "1.1.4";
 }

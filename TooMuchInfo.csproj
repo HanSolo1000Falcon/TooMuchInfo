@@ -9,7 +9,7 @@
         <Reference Include="0Harmony">
             <HintPath>$(BepInExAssemblyPath)\0Harmony.dll</HintPath>
         </Reference>
-        <Reference Include="Assembly-CSharp">
+        <Reference Include="Assembly-CSharp" Publicize="True">
             <HintPath>$(GameAssemblyPath)\Assembly-CSharp.dll</HintPath>
         </Reference>
         <Reference Include="Assembly-CSharp-firstpass">
@@ -25,7 +25,7 @@
             <HintPath>$(BepInExAssemblyPath)\BepInEx.Harmony.dll</HintPath>
         </Reference>
         <Reference Include="Newtonsoft.Json">
-          <HintPath>$(GameAssemblyPath)\Newtonsoft.Json.dll</HintPath>
+            <HintPath>$(GameAssemblyPath)\Newtonsoft.Json.dll</HintPath>
         </Reference>
         <Reference Include="Unity.Cinemachine">
             <HintPath>$(GameAssemblyPath)\Unity.Cinemachine.dll</HintPath>
@@ -288,5 +288,12 @@
         <Reference Include="websocket-sharp">
             <HintPath>$(GameAssemblyPath)\websocket-sharp.dll</HintPath>
         </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" Version="0.5.0-beta.2">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
     </ItemGroup>
 </Project>
