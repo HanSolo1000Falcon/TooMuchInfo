@@ -42,13 +42,13 @@ public static class OnDataReceived
 
         switch (hasCosmetx)
         {
-            case true when !Extensions.PlayerMods[rig].Contains("[<color=red>CosmetX</color>]"):
-                Extensions.PlayerMods[rig].Add("[<color=red>CosmetX</color>]");
+            case true when !Extensions.PlayerMods[rig].Contains("[<color=red>COSMETX</color>]"):
+                Extensions.PlayerMods[rig].Add("[<color=red>COSMETX</color>]");
 
                 break;
 
-            case false when Extensions.PlayerMods[rig].Contains("[<color=red>CosmetX</color>]"):
-                Extensions.PlayerMods[rig].Remove("[<color=red>CosmetX</color>]");
+            case false when Extensions.PlayerMods[rig].Contains("[<color=red>COSMETX</color>]"):
+                Extensions.PlayerMods[rig].Remove("[<color=red>COSMETX</color>]");
 
                 break;
         }
