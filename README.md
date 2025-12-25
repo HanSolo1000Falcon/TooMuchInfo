@@ -1,8 +1,6 @@
 
-# TooMuchInfo  ![downloads](https://img.shields.io/github/downloads/ZlothY29IQ/TooMuchInfo/total)
+# TooMuchInfo  ![downloads](https://img.shields.io/github/downloads/HanSolo1000Falcon/TooMuchInfo/total)
 A mod for Gorilla Tag that gives you too much info about a person
-
-<img src="https://i.imgur.com/xlVh5S4.jpeg">
 
 # Installation
 
