@@ -16,6 +16,7 @@ public class Plugin : BaseUnityPlugin
     public static Dictionary<string, string> KnownMods;
     public static Dictionary<string, string> KnownCheats;
     public static Dictionary<string, string> KnownPeople;
+    public static Dictionary<string, string> KnownCosmetics;
 
     private void Awake() => new Harmony(Constants.PluginGuid).PatchAll();
 
@@ -58,7 +59,7 @@ public class Plugin : BaseUnityPlugin
                                                                                       reader.ReadToEnd());
                                                                   }
                                                               }
-                                                              
+
                                                               HttpResponseMessage knownPeopleEndPointResponse =
                                                                       httpClient.GetAsync(
                                                                                       GorillaInfoEndPointURL +
@@ -71,6 +72,25 @@ public class Plugin : BaseUnityPlugin
                                                                   using (StreamReader reader = new(stream))
                                                                   {
                                                                       KnownPeople = JsonConvert
+                                                                             .DeserializeObject<
+                                                                                      Dictionary<string, string>>(
+                                                                                      reader.ReadToEnd());
+                                                                  }
+                                                              }
+
+                                                              HttpResponseMessage knownCosmeticsEndPointResponse =
+                                                                      httpClient.GetAsync(
+                                                                                      GorillaInfoEndPointURL +
+                                                                                      "KnownCosmetics.txt")
+                                                                             .Result;
+
+                                                              using (Stream stream = knownCosmeticsEndPointResponse
+                                                                            .Content
+                                                                            .ReadAsStreamAsync().Result)
+                                                              {
+                                                                  using (StreamReader reader = new(stream))
+                                                                  {
+                                                                      KnownCosmetics = JsonConvert
                                                                              .DeserializeObject<
                                                                                       Dictionary<string, string>>(
                                                                                       reader.ReadToEnd());
